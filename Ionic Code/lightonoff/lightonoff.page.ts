@@ -18,7 +18,7 @@ export class LightonoffPage implements OnInit {
 
 
   lightoff() {
-    this.http.get('http://37.27.5.34:9111/off').subscribe(
+    this.http.get('http://localhost:9111/off').subscribe(
       () => {
         this.lightStatus = 'Stop';
       },
@@ -30,7 +30,7 @@ export class LightonoffPage implements OnInit {
 
   lighton() {
     
-    this.http.get('http://37.27.5.34:9111/on').subscribe(
+    this.http.get('http://localhost:9111/on').subscribe(
       () => {
         this.lightStatus = 'Start';
       },

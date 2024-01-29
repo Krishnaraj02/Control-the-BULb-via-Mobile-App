@@ -3,7 +3,7 @@
 
 #define wifi_ssid "."
 #define wifi_password "0987654321"
-#define mqtt_server "37.27.5.34"
+#define mqtt_server "localhost"
 #define mqtt_topic "esp8266/led"
 
 WiFiClient espClient;

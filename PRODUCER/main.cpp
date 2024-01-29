@@ -2,7 +2,7 @@
 #include <cstring>
 #include <mosquitto.h>
 #include <crow.h>
-// #include <pqxx/pqxx>
+
 #include <crow/middlewares/cors.h>
 
 class MQTTClient {
@@ -60,11 +60,11 @@ class MyApp {
 private:
     MQTTClient client;
     crow::SimpleApp app;
-    // pqxx::connection dbconnect;
+   
 
 public:
     MyApp() : client("localhost", 1883, 60){
-    // ,dbconnect("dbname=mqttdb user=postgres password=pgEbiAdmin host=37.27.5.34 port=5432") {
+    
 
         CROW_ROUTE(app, "/on").methods(crow::HTTPMethod::Get)
         ([this](const crow::request& req) {
@@ -86,7 +86,7 @@ public:
             }
 
             client.disconnect();
-            // saveToDatabase("LED turned on");
+            
             res = crow::response(200, "LED turned on");
             return res;
         });
@@ -111,18 +111,12 @@ public:
             }
 
             client.disconnect();
-            // saveToDatabase("LED turned off");
+          
             res = crow::response(200, "LED turned off");
             return res;
         });
 
     }
-
-    // void saveToDatabase(const std::string& message) {
-    //     pqxx::work txn(dbconnect);
-    //     txn.exec_params("INSERT INTO notify_table (data) VALUES ('"+message+"') ");
-    //     txn.commit();
-    // }
 
     void run() {
         app.port(9111).multithreaded().run();
