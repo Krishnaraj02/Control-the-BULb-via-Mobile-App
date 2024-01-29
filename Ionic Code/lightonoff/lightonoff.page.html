@@ -1,0 +1,27 @@
+ <ion-header>
+  <ion-toolbar>
+    <ion-title>LED Control App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" class="btn-content">
+        <br><ion-button class="onbutton" (click)="lighton()" shape="round">ON</ion-button><br>
+        <ion-button class="offbutton" (click)="lightoff()" shape="round">OFF</ion-button><br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-datetime-button datetime="datetime"></ion-datetime-button>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime id="datetime"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+</ion-content>
+
+
+

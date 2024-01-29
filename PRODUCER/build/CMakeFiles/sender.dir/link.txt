@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/sender.dir/main.cpp.o -o sender  -lmosquitto 

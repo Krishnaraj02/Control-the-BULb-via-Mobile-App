@@ -1,0 +1,3 @@
+/opt/Krishnaraj/PRODUCER/build/CMakeFiles/rebuild_cache.dir
+/opt/Krishnaraj/PRODUCER/build/CMakeFiles/edit_cache.dir
+/opt/Krishnaraj/PRODUCER/build/CMakeFiles/sender.dir

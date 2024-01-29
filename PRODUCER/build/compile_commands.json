@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/opt/Krishnaraj/PRODUCER/build",
+  "command": "/usr/bin/g++  -I/opt/Krishnaraj/Crow/build/asio/asio/include -g -o CMakeFiles/sender.dir/main.cpp.o -c /opt/Krishnaraj/PRODUCER/main.cpp",
+  "file": "/opt/Krishnaraj/PRODUCER/main.cpp"
+}
+]
